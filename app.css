@@ -1,0 +1,154 @@
+:root{
+    --main-color: #c0392b;
+    --body-bg: #181616;
+    --box-bg: #221f1f;
+    --text-color: #ffffff;
+
+    --nav-height: 60px;
+    --space-top: 30px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body{
+    font-family: 'Cairo', sans-serif;
+    background-color: var(--body-bg);
+    color: var(--text-color);
+    padding-top: var(--nav-height)
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.main-color {
+    color: var(--main-color);
+}
+
+.container {
+    max-width: 1920px;
+    padding: 0 40px;
+    margin: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.nav-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    background-color: #000000;
+}
+
+.fontindex {
+    font-size: 200%;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--text-color);
+    height: var(--nav-height);
+}
+
+.nav a {
+    color: var(--text-color);
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.nav-menu {
+    list-style-type:none ;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-menu li ~ li {
+    margin-left: 30px;
+}
+
+.nav-menu a {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.nav-menu a:hover {
+    color: var(--main-color);
+}
+
+.nav-menu a.btn:hover,
+a.logo:hover {
+    color: unset;
+}
+/*movies.html*/
+.movie-header-title {
+    font-size: 2rem;
+    padding-left: 2.5%;
+    margin-bottom: 1em;
+    font-weight: 700;   
+}
+/*for movies*/
+.movie-details-image {
+    padding-bottom: 2.5%;
+    margin-top: 2em;
+    margin-left: 40%;
+    width: 250px;
+    height: 370px;
+}
+
+.movie-details-title {
+    font-size: 3rem;
+    font-weight: 800;   
+    padding-bottom: 2.5%;
+}
+
+.movie-details-plot {
+    font-size: 1.25rem;
+    padding-bottom: 2.5%;
+}
+
+.grid-main {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 50vh;
+    overflow-x: hidden;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,300px));
+}
+
+.grid-main img {
+    width: 250px;
+    height: 370px;                                                      
+    object-fit: cover;
+    object-position: center;
+}
